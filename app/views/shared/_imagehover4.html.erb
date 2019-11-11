@@ -1,0 +1,47 @@
+<div class="content">
+				
+				<div class="grid">
+					<figure class="effect-julia">
+						
+                        
+                        <%= image_tag(@nante.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+                    
+						<figcaption>
+							
+							<div>
+								
+							   <h2>	<%= @nante.title %></h2>
+                            
+                          <div class="utility-info">
+                            <ul class="utility-list"> 
+                                <li class="comments"><%= @nante.comments.count %></li>
+								<li class="date"><%= @nante.published_at %></li>
+
+                            </ul>
+                          </div><!-- /.utility-info -->
+
+							</div>
+							
+						</figcaption>			
+					</figure>
+					<figure class="effect-julia">
+					
+						<%= image_tag(@nante.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+						
+						<figcaption>
+							
+							<div>
+								<h2><%= @nante.title %></h2>
+                          
+                          <div class="utility-info">
+                            <ul class="utility-list"> 
+                                <li class="comments"><%= @nante.comments.count %></li>
+								<li class="date"><%= @nante.published_at %></li>
+
+                            </ul>
+                          </div><!-- /.utility-info -->
+							</div>
+							
+						</figcaption>			
+					</figure>
+				</div>

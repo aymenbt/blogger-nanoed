@@ -1,0 +1,30 @@
+<% @restaus.each do |restau| %>
+<div class="content">
+				
+				<div class="grid">
+					<figure class="effect-julia">
+						
+                        
+                        <%= image_tag(restau.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+                      
+						<figcaption>
+							<h2> <span></span></h2>
+							<div>
+								
+								<h2><p><%= restau.title %></p></h2>
+                            
+                          <div class="utility-info">
+                            <ul class="utility-list"> 
+                                <li class="comments"><%= restau.recomments.count %></li>
+								<li class="date"><%= restau.published_at %></li>
+
+                            </ul>
+                          </div><!-- /.utility-info -->
+
+							</div>
+							
+						</figcaption>			
+					</figure>
+					
+
+ <% end %>               

@@ -1,0 +1,93 @@
+<br>
+<br>
+<br>
+
+
+<% @nantes.each do |nante| %>
+
+<div class="row">
+
+
+<div class="responsive-blog-post">
+  <div class="individual-post">
+  
+ <h6 class="card-title"> <%= nante.title %>  </h6>
+
+    <%= image_tag(nante.image, width:"1000px", height:"1000px", alt: "picture of a whale eating a donkey") %>
+    <p> <%= truncate nante.description, length: 60 %> </p>
+    
+    
+      <%= link_to "plus", nante_path(nante), class: "button" %>
+
+    Tags: <%= raw nante.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+    
+    
+  </div>
+</div>
+
+</div>
+
+<% end %>
+
+
+
+
+<% @articles.each do |article| %>
+
+<div class="row">
+
+
+<div class="responsive-blog-post">
+  <div class="individual-post">
+  
+ <h6 class="card-title"> <%= article.title %>  </h6>
+
+    <%= image_tag(article.image, width:"1000px", height:"1000px", alt: "picture of a whale eating a donkey") %>
+    <p> <%= truncate article.description, length: 60 %> </p>
+    
+      <%= link_to "plus", article_path(article), class: "button" %>
+
+    Tags: <%= raw article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+    
+    
+  </div>
+</div>
+
+</div>
+
+<% end %>
+
+
+
+<% @restaus.each do |restau| %>
+
+<div class="row">
+
+
+<div class="responsive-blog-post">
+  <div class="individual-post">
+  
+ <h6 class="card-title"> <%= restau.title %>  </h6>
+
+    <%= image_tag(restau.image, width:"1000px", height:"1000px", alt: "picture of a whale eating a donkey") %>
+    <p> <%= truncate restau.description, length: 60 %> </p>
+    
+      <%= link_to "plus", restau_path(restau), class: "button" %>
+
+   
+    Tags:<a class="tag-cloud-individual-tag" ><%= raw restau.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+    
+
+
+  </div>
+</div>
+
+</div>
+
+<% end %>
+
+
+
+
+
+

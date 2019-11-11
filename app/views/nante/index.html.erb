@@ -1,0 +1,95 @@
+
+
+
+
+
+<br>
+
+
+<%= render 'shared/respherosection' %>
+
+
+<br>
+
+
+
+<div class="row">
+
+
+  <div class="left", style="width: 56%">
+   <%= render 'shared/mange' %>
+  </div>
+  <br>
+  <br>
+  <div class="right", style="width: 30%">
+    <%= render 'shared/cate' %>
+  </div>
+
+
+
+  <%= render 'shared/blockimage' %>
+
+<div class="container">
+
+   <div class="left", style="width: 62%">
+   <%= render 'shared/blogpost' %>
+   </div>
+ 
+ <br>
+
+  <div class="right">
+   <%= render 'shared/imageri' %>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+
+  <div class="left", style="width: 58%">
+   <%= render 'shared/blogpost2' %>
+  </div>
+
+ <br>
+ <br>
+ <br>
+  <div class="right", style="width: 40%">
+   <%= render 'shared/oumanger' %>
+  </div>
+</div>
+</div>
+<br>
+<hr>
+<h5 class="centrer">TAGS</h5>
+<div class="right", style="width: 58%">
+
+<div id="tag_cloud">
+  <% tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
+</div>
+<div id="tag_cloud">
+  <% tag_cloud Nante.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
+</div>
+<div id="tag_cloud">
+  <% tag_cloud Restau.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
+</div>
+
+
+</div>
+  
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+
+
+         
+

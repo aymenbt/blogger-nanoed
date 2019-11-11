@@ -1,0 +1,50 @@
+<% @articles.each do |article| %>
+
+<div class="content">
+				
+				<div class="grid">
+					<figure class="effect-julia">
+						
+                        
+                        <%= image_tag(article.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+                      
+						<figcaption>
+							
+							<div>
+								
+							   <h2>	<%= article.title %></h2>
+                            
+                          <div class="utility-info">
+                            <ul class="utility-list"> 
+                                <li class="comments"><%= article.comment_articles.count %></li>
+								<li class="date"><%= article.published_at %></li>
+
+                            </ul>
+                          </div><!-- /.utility-info -->
+
+							</div>
+             <% end %>               
+							
+						</figcaption>			
+					</figure>
+					<figure class="effect-julia">
+					
+						<%= image_tag(@restau.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+						
+						<figcaption>
+							
+							<div>
+								<h2><%= @restau.title %></h2>
+                                
+                          <div class="utility-info">
+                            <ul class="utility-list"> 
+                                <li class="comments"><%= @restau.recomments.count %></li>
+								<li class="date"><%= @restau.published_at %></li>
+
+                            </ul>
+                          </div><!-- /.utility-info -->
+							</div>
+							
+						</figcaption>			
+					</figure>
+				</div>

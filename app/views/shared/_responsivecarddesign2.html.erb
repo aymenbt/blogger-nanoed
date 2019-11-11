@@ -1,0 +1,34 @@
+<% @restaus.each do |restau| %>
+    
+      
+        
+    
+
+<div class="tabs-content" data-tabs-content="example-tabs">
+<div class="tabs-panel is-active" id="panel1">
+<%= link_to restau_path(restau) do %>
+  <h4><%= restau.title %></h4>
+<% end %>
+<div class="media-object stack-for-small">
+<div class="media-object-section">
+<%= link_to restau_path(restau) do %>
+<%= image_tag(restau.image, width:"200px", height:"200px", alt: "picture of a whale eating a donkey", class: "thumbnail") %>
+</div>
+<div class="media-object-section">
+<li><a href="#">Autheur: <%= restau.author %></a></li>
+<h3><small><%= restau.published_at %></small></h3>
+<p>
+<p><%= truncate restau.description, length: 60 %></p>
+   <%= link_to 'voir plus', restau_path(restau) %>
+</p>
+
+<p>
+   <i class="glyphicon glyphicon-tag" aria-hidden="true">Tags:</i><a class="tag-cloud-individual-tag" ><%= raw restau.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<% end %>
+<% end %>
+

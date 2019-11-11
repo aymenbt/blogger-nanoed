@@ -1,0 +1,34 @@
+
+    
+
+
+
+<% @nantes.each do |nante| %>
+    
+      
+        
+    
+
+<div class="tabs-content" data-tabs-content="example-tabs">
+<div class="tabs-panel is-active" id="panel1">
+<%= link_to nante_path(nante) do %>
+  <h4><%= nante.title %></h4>
+<% end %>
+<div class="media-object stack-for-small">
+<div class="media-object-section">
+<%= link_to nante_path(nante) do %>
+<%= image_tag(nante.image, width:"200px", height:"200px", alt: "picture of a whale eating a donkey", class: "thumbnail") %>
+</div>
+<div class="media-object-section">
+<li><a href="#">Autheur: <%= nante.author %></a></li>
+<h3><small><%= nante.published_at %></small></h3>
+<p>
+<p><%= truncate nante.description, length: 60 %></p>
+   <%= link_to 'voir plus', nante_path(nante) %>
+</p>
+</div>
+</div>
+</div>
+</div>
+<% end %>
+<% end %>

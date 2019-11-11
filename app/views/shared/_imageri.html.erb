@@ -1,0 +1,24 @@
+<% @nantes.offset(6).each do |nante| %>
+
+<%= image_tag(nante.image, size: "400x300", alt: "article promo image") %>
+<%= link_to nante.title, nante_path(nante.id) %>
+<% end %>
+
+<br>
+
+<% @nantes.offset(5).each do |nante| %>
+<%= image_tag(nante.image, size: "400x300", alt: "article promo image") %>
+<%= link_to nante.title, nante_path(nante.id) %>
+<% end %>
+
+<br>
+<% @nantes.offset(8).each do |nante| %>
+  <%= image_tag(nante.image, size: "400x300", alt: "article promo image") %>
+  <%= link_to nante.title, nante_path(nante.id) %>
+<% end %>
+
+<br>
+<% @nantes.offset(9).each do |nante| %>
+  <%= image_tag(nante.image, size: "400x300", alt: "article promo image") %>
+  <%= link_to nante.title, nante_path(nante.id) %>
+<% end %>

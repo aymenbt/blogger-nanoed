@@ -1,0 +1,21 @@
+<div class="blog-card spring-fever">
+        <%= image_tag(@nante.image, width:"1000px", height:"1000px") %>
+  <div class="title-content">
+  
+    <h3><%= @nante.title %></h3>
+    <hr />
+    <div class="intro">Yllamco laboris.</div>
+  </div><!-- /.title-content -->
+  <div class="card-info">
+    <%= @nante.description %> 
+  </div><!-- /.card-info -->
+  <div class="utility-info">
+    <ul class="utility-list">
+      <li class="comments"><%= @nante.comments.count %></li>
+      <li class="date"><%= @nante.published_at %></li>
+    </ul>
+  </div><!-- /.utility-info -->
+  <!-- overlays -->
+  <div class="gradient-overlay"></div>
+  <div class="color-overlay"></div>
+</div><!-- /.blog-card -->

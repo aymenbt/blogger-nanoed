@@ -1,0 +1,78 @@
+ 
+
+
+
+
+
+         
+<br>
+
+
+
+<article class="grid-container">
+<div class="grid-x align-center">
+<div class="cell medium-8">
+<div class="blog-post">
+<h3><%= @article.title %> <small><%= @article.published_at %></small></h3>
+<%= image_tag(@article.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+<p><%= @article.description %></p>
+<div class="callout">
+<ul class="menu simple">
+<li><a href="#">Autheur: <%= @article.author %></a></li>
+<li><a href="#">Comments: <%= @article.comment_articles.count %></a></li>
+<li>
+ <i class="glyphicon glyphicon-tag" aria-hidden="true">Tags:</i><a class="tag-cloud-individual-tag" ><%= raw @article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+
+
+<br>
+<div class="container">
+<div class="right", style="width: 25%">
+<%= render 'shared/cate' %>
+</div>
+
+<div class="left", style="width: 70%">
+<%= render 'shared/imagehover2' %>
+</div>
+</div>
+
+
+
+
+
+<br>
+<br>
+<br>  
+<br>
+<br>
+
+
+
+<br>
+<br>
+
+<div class="container">
+ <div class="left", style="width: 100%">
+   <h4> <%= @article.comment_articles.count %> commentaires</h4>
+         <%= render @article.comment_articles %>
+ </div>   
+ </div>         
+<div class="container">
+     <div class="left", style="width: 70%">
+         <%= render 'comment_articles/form' %> 
+     </div>
+</div>
+  <br>
+  <br>
+  <br>
+
+
+
+<br>
+<br>
+<br>

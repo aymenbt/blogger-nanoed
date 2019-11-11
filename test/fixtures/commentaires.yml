@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  body: MyText
+  nante: one
+  article: one
+  restau: one
+
+two:
+  name: MyString
+  body: MyText
+  nante: two
+  article: two
+  restau: two

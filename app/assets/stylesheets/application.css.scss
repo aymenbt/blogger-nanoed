@@ -1,0 +1,230 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+ *= require simple_calendar
+ 
+ 
+ */
+@import "nante";
+@import "foundation_and_overrides";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "font-awesome.min";
+@import "restau";
+@import "article";
+@import "style";
+@import "main";
+
+.centrer {
+  text-align: center;
+}
+//bar
+
+.menu-hover-lines {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+}
+
+.menu-hover-lines li a {
+  padding: 0.75rem 0;
+  color: #434343;
+  position: relative;
+  margin-left: 1rem;
+}
+
+.menu-hover-lines li:first-child a {
+  margin-left: 0;
+}
+
+.menu-hover-lines li.active > a {
+  background-color: transparent;
+}
+
+.menu-hover-lines a:before,
+.menu-hover-lines a::after {
+  height: 3px;
+  position: absolute;
+  content: "";
+  transition: all 0.35s ease;
+  background-color: #f7c873;
+  width: 0;
+}
+
+.menu-hover-lines a::before {
+  top: 0;
+  left: 0;
+}
+
+.menu-hover-lines a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu-hover-lines a:hover,
+.menu-hover-lines li.active > a {
+  color: #0a0a0a;
+  transition: all 0.35s ease;
+}
+
+.menu-hover-lines a:hover::before,
+.menu-hover-lines .active a::before,
+.menu-hover-lines a:hover::after,
+.menu-hover-lines .active a::after {
+  width: 100%;
+}
+
+//bar
+//search bar
+
+.search-container {
+  width: 490px;
+  display: block;
+  margin: 0 auto;
+}
+
+input#search-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #d0cfce;
+  outline: none;
+  &:focus {
+    border: 1px solid #008abf;
+    transition: 0.35s ease;
+    color: #008abf;
+    &::-webkit-input-placeholder {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+    &:-ms-placeholder {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+  }
+}
+
+.search-icon {
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  top: -20px;
+  right: 55px;
+}
+
+// search bar
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+body {
+  background: #ffd89b;
+  background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
+  background: linear-gradient(to right, #ffd89b, #19547b);
+  min-height: 100vh;
+}
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+//search bar2
+.input-group.md-form.form-sm.form-1 input {
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input {
+  border: 1px solid #bdbdbd;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input.red-border {
+  border: 1px solid #ef9a9a;
+}
+.input-group.md-form.form-sm.form-2 input.lime-border {
+  border: 1px solid #cddc39;
+}
+.input-group.md-form.form-sm.form-2 input.amber-border {
+  border: 1px solid #ffca28;
+}
+//search bar
+.pagination a,
+.pagination span.current,
+.pagination span.gap {
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(228, 222, 222);
+  border-left-width: 0;
+}
+
+.pagination {
+  border-left: 1px solid rgb(236, 233, 233);
+  .first {
+    padding: 0;
+    float: none;
+    border: none;
+  }
+  .prev {
+    padding: 0;
+    float: none;
+    border: none;
+  }
+  .page {
+    padding: 0;
+    float: none;
+    border: none;
+  }
+  .next {
+    padding: 0;
+    float: none;
+    border: none;
+  }
+  .last {
+    padding: 0;
+    float: none;
+    border: none;
+  }
+}

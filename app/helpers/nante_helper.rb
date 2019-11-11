@@ -1,0 +1,2 @@
+module NanteHelper
+end

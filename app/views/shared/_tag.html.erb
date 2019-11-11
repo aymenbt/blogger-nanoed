@@ -1,0 +1,13 @@
+<section class="tag-cloud-section">
+  <h5 class="tag-cloud-title">TAGS</h5>
+  <div class="tag-cloud">
+ 
+  <% tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class| %>
+    <a class="tag-cloud-individual-tag" href="#"><%= link_to tag.name, tag_path(tag.name), class: css_class %><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+  <% end %>  
+    
+    
+  </div>
+</section>
+
+

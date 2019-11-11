@@ -1,0 +1,26 @@
+<%= form_for([@nante,@nante.comments.build]) do |f| %>
+    
+
+
+  <!-- comment form -->
+<form class="comment-section-form">
+  <div class="comment-section-box">
+    <div class="row">
+      <div class="small-12 column">
+        <h4>Ajouter un commentaire:</h4>
+        <label>Name
+          <%= f.text_field :name %>
+        </label>
+        
+        <label>Comment
+        
+          <%= f.text_area :body, rows: "10" %>
+        </label>
+         <%= f.submit"commenter"  %>
+      </div>
+    </div>
+  </div>
+</form>
+<!--/comment box-->
+
+ <% end %>

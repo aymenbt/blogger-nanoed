@@ -1,0 +1,39 @@
+
+
+  
+<div class="row">
+<% for restau in @restaus %>
+  <div class="col-sm-6 col-md-4">
+
+  <div class="content">
+   <div class="grid">
+    <figure class="effect-julia">
+    <%= link_to restau_path(restau) do %>
+      <%= image_tag(@restau.image.url, width:"490px", height:"200px") %> 
+    
+                        <figcaption>
+							
+							<div>
+								<h2><%= @restau.title %></h2>
+                                
+                          <div class="utility-info">
+                            <ul class="utility-list"> 
+                                <li class="comments"><%= @restau.recomments.count %></li>
+								<li class="date"><%= @restau.published_at %></li>
+    
+                            </ul>
+                          </div><!-- /.utility-info -->
+							</div>
+							
+						</figcaption>
+ </figure>
+ <% end %>
+</div>
+</div>
+</div>
+   <% end %> 
+
+</div>
+
+
+  

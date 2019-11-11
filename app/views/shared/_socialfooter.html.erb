@@ -1,0 +1,44 @@
+
+
+<footer class="social-footer">
+  <div class="social-footer-left">
+
+
+
+
+<div class="top-bar-left">
+
+<ul class="menu">
+
+  
+<%= form_tag(results_search_index_path, class: "col-3 search-top", method: "get") do %>
+  
+ 
+   
+   <%= text_field_tag(:q, nil, maxlength: 15, class: 'form-control', aria_hidden: 'true', placeholder: 'recherche...', type: "text", id: "s") %>
+   <%= image_tag("searchicon.png", class: "search-icon", border: 0) %>
+    
+
+ <% end %>
+
+</ul>
+
+
+</div>
+
+  </div>
+ 
+  
+
+
+  <div class="social-footer-icons">
+    <ul class="menu simple">
+      <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+      <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+  
+</footer>
+

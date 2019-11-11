@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+<article class="grid-container">
+<div class="grid-x align-center">
+<div class="cell medium-8">
+<div class="blog-post">
+<h3><%= @evenement.name %> <small>le:<%= @evenement.start_time %></small></h3>
+<%= image_tag(@evenement.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+<p><%= @evenement.description %></p>
+<div class="callout">
+<ul class="menu simple">
+<li>Le: <%= @evenement.start_time %></li>
+
+<li><%= link_to 'Retour au Calendrier', evenements_path %></li>
+
+</ul>
+</div>
+</div>
+</div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

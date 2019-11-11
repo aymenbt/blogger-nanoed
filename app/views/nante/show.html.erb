@@ -1,0 +1,79 @@
+
+
+<br>
+
+
+
+<article class="grid-container">
+<div class="grid-x align-center">
+<div class="cell medium-8">
+<div class="blog-post">
+<h3><%= @nante.title %> <small><%= @nante.published_at %></small></h3>
+<%= image_tag(@nante.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+<p><%= @nante.description %></p>
+<div class="callout">
+<ul class="menu simple">
+<li><a href="#">Autheur: <%= @nante.author %></a></li>
+<li><a href="#">Comments: <%= @nante.comments.count %></a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+
+
+<br>
+<div class="container">
+
+<div class="right", style="width: 25%">
+<%= render 'shared/cate' %>
+</div>
+
+<br>
+
+<br>
+
+<div class="left", style="width: 70%">
+<%= render 'shared/imagehover3' %>
+</div>
+
+</div>
+
+
+
+
+
+<br>
+<br>
+<br>  
+<br>
+<br>
+
+
+
+<br>
+<br>
+
+<div class="container">
+<div class="left", style="width: 100%">
+   <h4> <%= @nante.comments.count %> commentaires</h4>
+         <%= render @nante.comments %>
+</div>            
+
+     <div class="left", style="width: 70%">
+         <%= render 'comments/form' %> 
+     </div>
+</div>
+  <br>
+  <br>
+  <br>
+
+
+
+<br>
+<br>
+<br>
+
+
+
+

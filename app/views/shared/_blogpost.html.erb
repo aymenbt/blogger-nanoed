@@ -1,0 +1,63 @@
+
+<!-- Panel's header -->
+  <div class="posts-panel">
+       <header class="panel-header">
+           <h1 class="panel-title">Les meilleurs restaurants à Nantes</h1>
+      </header>
+   </div>  
+
+<% @restaus.each do |restau| %>
+<!-- Sample 1-->
+<!-- Posts panel container -->
+<div class="posts-panel">
+
+  
+
+  <!-- Panel's content -->
+  <div class="panel-content">
+
+   
+    
+
+
+    <!-- Posts list -->
+    <section class="posts-list">
+      <div class="post-item">
+        
+      
+        
+          <%= link_to restau_path(restau) do %>
+            <%= image_tag(restau.image, class: "post-thumbnail") %>
+          <% end %>
+        
+
+        <div class="post-text">
+          
+           <%= link_to restau_path(restau) do %>
+            <h3 class="post-title"><%= restau.title %></h3>
+           <% end %> 
+          
+        </div>
+          <div class="post-meta">
+            <span class="meta"><span class="meta-icon fa fa-user-circle-o" aria-hidden="true"></span><a class="meta-text"><%= restau.author %></a></span>
+            <span class="meta"><span class="meta-icon fa fa-clock-o" aria-hidden="true"></span><span class="meta-text"><%= restau.published_at %></span></span>
+          </div>
+          <div class="post-summary">
+            <p><%= truncate restau.description, length: 60 %>...
+              <br>
+              
+              <%= link_to 'voir plus', restau_path(restau) %><span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+             
+             
+            </p>
+          </div>
+       
+  </div>
+  </section>
+</div>
+</div>
+<% end %>
+      
+
+
+

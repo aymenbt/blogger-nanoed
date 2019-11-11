@@ -1,0 +1,123 @@
+<!-- Sample 2-->
+<!-- Posts panel container -->
+<div class="posts-panel grid">
+
+  <!-- Panel's header -->
+  <header class="panel-header">
+    <h1 class="panel-title">Autres Articles </h1>
+  </header>
+
+  <!-- Panel's content -->
+  <div class="panel-content">
+
+    <!-- Pinned post section -->
+    <section class="pinned-post">
+      <!-- Post item -->
+
+      <div class="post-item">
+
+        <!-- Post's thumbnail -->
+        
+
+         <% @articles.limit(1).offset(6).each do |article| %>
+          <%= image_tag(article.image, size: "200x200", alt: "", class: "post-thumbnail") %>
+          <%= link_to article.title, article_path(article.id) %>
+          
+   
+
+        <!-- Post's text -->
+        <div class="post-text">
+
+          <!-- Post's title -->
+          <a href="#">
+            <h3 class="post-title">  </h3>
+         
+          </a>
+          <div class="post-meta">
+            <span class="meta"><span class="meta-icon fa fa-user-circle-o" aria-hidden="true"></span><%= article.author %></span>
+            <span class="meta"><span class="meta-icon fa fa-clock-o" aria-hidden="true"></span><span class="meta-text"><%= article.published_at %></span></span>
+          </div>
+           
+          <!-- Post's summary -->
+          <div class="post-summary">
+            <p><%= truncate article.description, length: 60 %>..
+            <br>
+              <%= link_to 'Voir plus', article_path(article) %><span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <% end %>
+    <!-- Posts list -->
+    <section class="posts-list">
+      <div class="post-item">
+        
+        <% @nantes.limit(1).offset(2).each do |nante| %>
+         <%= image_tag(nante.image, size: "100x100", alt: "", class: "post-thumbnail") %>
+          
+       
+        <div class="post-text">
+          
+            <h3 class="post-title"><%= link_to nante.title, nante_path(nante.id) %></h3>
+         
+          <div class="post-meta">
+            <span class="meta"><span class="meta-icon fa fa-user-circle-o" aria-hidden="true"></span><%= nante.author %></span>
+            <span class="meta"><span class="meta-icon fa fa-clock-o" aria-hidden="true"></span><span class="meta-text"><%= nante.published_at %></span></span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+      <div class="post-item">
+        
+        <% @nantes.limit(1).offset(1).each do |nante| %>
+          <%= image_tag(nante.image, size: "100x100", alt: "", class: "post-thumbnail") %>
+        
+        <div class="post-text">
+          
+            <h3 class="post-title"><%= link_to nante.title, nante_path(nante.id) %></h3>
+          
+          <div class="post-meta">
+            <span class="meta"><span class="meta-icon fa fa-user-circle-o" aria-hidden="true"></span><%= nante.author %></span>
+            <span class="meta"><span class="meta-icon fa fa-clock-o" aria-hidden="true"></span><span class="meta-text"><%= nante.published_at %></span></span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+      <div class="post-item">
+        
+          <% @nantes.limit(1).offset(4).each do |nante| %>
+          <%= image_tag(nante.image, size: "100x100", alt: "", class: "post-thumbnail") %>
+       
+        <div class="post-text">
+          
+            <h3 class="post-title"><%= link_to nante.title, nante_path(nante.id) %></h3>
+          
+          <div class="post-meta">
+            <span class="meta"><span class="meta-icon fa fa-user-circle-o" aria-hidden="true"></span><%= nante.author %></span>
+            <span class="meta"><span class="meta-icon fa fa-clock-o" aria-hidden="true"></span><span class="meta-text"><%= nante.published_at %></span></span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+      <div class="post-item">
+        
+          <% @nantes.limit(1).offset(7).each do |nante| %>
+          <%= image_tag(nante.image, size: "100x100", alt: "", class: "post-thumbnail") %>
+       
+        <div class="post-text">
+          
+            <h3 class="post-title"><%= link_to nante.title, nante_path(nante.id) %></h3>
+          
+          <div class="post-meta">
+            <span class="meta"><span class="meta-icon fa fa-user-circle-o" aria-hidden="true"></span><%= nante.author %></span>
+            <span class="meta"><span class="meta-icon fa fa-clock-o" aria-hidden="true"></span><span class="meta-text"><%= nante.published_at %></span></span>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      
+    </section>
+  </div>
+</div>

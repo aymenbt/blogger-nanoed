@@ -1,0 +1,24 @@
+<% @articles.each do |article| %>
+
+<div class="row">
+
+
+<div class="responsive-blog-post">
+  <div class="individual-post">
+  
+ <h6 class="card-title"> <%= article.title %>  </h6>
+
+    <%= image_tag(article.image, width:"1000px", height:"1000px", alt: "picture of a whale eating a donkey") %>
+    <p> <%= article.description %> </p>
+    
+      <%= link_to "plus", article_path(article), class: "button" %>
+
+    Tags: <%= raw article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+    
+    
+  </div>
+</div>
+
+</div>
+
+<% end %>

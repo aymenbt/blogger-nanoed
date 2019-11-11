@@ -1,0 +1,48 @@
+
+
+  <% @restaus.each do |restau| %> 
+
+
+
+<div class="travel-feature-card">
+  <div class="travel-feature-card-header">
+    <div class="row">
+       <div class="travel-feature-card-header-controls">
+             <span><a href=""><i class="date">Publier le:<%= restau.published_at %></i></a></span>
+            
+         </div>
+          
+      </div>
+    </div>  
+  
+
+
+  <div class="travel-feature-card-details">
+    
+    <div class="row">
+      <div class="small-12 medium-4 columns travel-feature-card-content">
+        <div class="row">
+          <div class="small-4 medium-8 columns">
+            <%= image_tag(restau.image.url, width:"490px", height:"200px", class: "travel-feature-card-image") %>
+          </div>
+          <div class="small-8 medium-10 columns">
+            <h6 class="travel-feature-card-title"><%= restau.title %></h6>
+            <p><%= truncate restau.description, length: 60 %></p>
+            <%= link_to 'voir plus', restau_path(restau) %>
+          </div>
+        </div> 
+      </div>
+
+      <div class="small-12 medium-3 columns travel-feature-card-price">
+        <h6>par:<%= restau.author %></h6>
+        <p class="travel-feature-card-price-subtext">commentaires<%= restau.recomments.count %></p>
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+
+
+
+<% end %>

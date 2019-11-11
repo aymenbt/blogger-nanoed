@@ -1,0 +1,72 @@
+
+<br>
+
+
+
+<article class="grid-container">
+<div class="grid-x align-center">
+<div class="cell medium-8">
+<div class="blog-post">
+<h3><%= @restau.title %> <small><%= @restau.published_at %></small></h3>
+<%= image_tag(@restau.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+<p><%= @restau.description %></p>
+<div class="callout">
+<ul class="menu simple">
+<li><a href="#">Autheur: <%= @restau.author %></a></li>
+<li><a href="#">Comments: <%= @restau.recomments.count %></a></li>
+<li> <i class="glyphicon glyphicon-tag" aria-hidden="true">Tags:</i><a class="tag-cloud-individual-tag" ><%= raw @restau.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+
+
+<br>
+<div class="container">
+<div class="right", style="width: 25%">
+<%= render 'shared/cate' %>
+</div>
+
+
+
+
+<div class="left", style="width: 70%">
+<%= render 'shared/responsivecarddesign2' %>
+</div>
+</div>
+<br>
+<br>
+<br>  
+<br>
+<br>
+
+
+
+<br>
+<br>
+
+<div class="container">
+<div class="right", style="width: 100%">
+   <h4> <%= @restau.recomments.count %> commentaires</h4>
+         <%= render @restau.recomments %>
+</div>            
+
+
+     <div class="left", style="width: 70%">
+         <%= render 'recomments/form' %> 
+     </div>
+</div>
+  <br>
+  <br>
+  <br>
+
+
+
+<br>
+<br>
+<br>
+
+
+
+

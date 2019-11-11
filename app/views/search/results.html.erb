@@ -1,0 +1,84 @@
+
+<h4>recherche Trouver  <h4>
+
+ <% if @nantes.empty? %>
+  <p> </p>
+ <% else %>
+  
+
+
+   <% @nantes.each do |nante| %>
+
+   <article class="grid-container">
+<div class="grid-x align-center">
+<div class="cell medium-8">
+<div class="blog-post">
+<h3><li> <%= link_to nante.title, nante %> </li> <small><%= nante.published_at %></small></h3>
+<%= image_tag(nante.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+<p></p>
+<div class="callout">
+<ul class="menu simple">
+<li><a href="#">Autheur: <%= nante.author %></a></li>
+<li><a href="#">Comments: <%= nante.comments.count %></a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<% end %>
+
+
+ <% @restaus.each do |restau| %>
+
+   <article class="grid-container">
+<div class="grid-x align-center">
+<div class="cell medium-8">
+<div class="blog-post">
+<h3><li> <%= link_to restau.title, restau %> </li> <small><%= restau.published_at %></small></h3>
+<%= image_tag(restau.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+<p></p>
+<div class="callout">
+<ul class="menu simple">
+<li><a href="#">Autheur: <%= restau.author %></a></li>
+<li><a href="#">Comments: <%= restau.recomments.count %></a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<% end %>
+
+
+ <% @articles.each do |article| %>
+
+   <article class="grid-container">
+<div class="grid-x align-center">
+<div class="cell medium-8">
+<div class="blog-post">
+<h3><li> <%= link_to article.title, article %> </li> <small><%= article.published_at %></small></h3>
+<%= image_tag(article.image, size: "1000x808", alt: "img21", class: "thumbnail") %>
+<p></p>
+<div class="callout">
+<ul class="menu simple">
+<li><a href="#">Autheur: <%= article.author %></a></li>
+<li><a href="#">Comments: <%= article.comment_articles.count %></a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<% end %>
+
+
+<% end %>
+
+<div class="left">
+<%= paginate @articles %>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -1,0 +1,33 @@
+
+<p id="notice"><%= notice %></p>
+
+
+
+
+
+
+
+
+<%= month_calendar events: @evenements do |date, evenements| %>
+  <%= date.day %>
+
+  <% evenements.each do |evenement| %>
+    <div>
+      
+      <%= link_to evenement do %>
+      <%= evenement.name %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+
+
+
+
+
+
+  
+
+
+
+
