@@ -1,5 +1,4 @@
 <% @nantes.offset(6).each do |nante| %>
-
 <%= image_tag(nante.image, size: "400x300", alt: "article promo image") %>
 <%= link_to nante.title, nante_path(nante.id) %>
 <% end %>

@@ -2,10 +2,17 @@ Rails.application.routes.draw do
 
   
 
+  get 'galerie/index'
+
+  get 'partenaire/index'
+
+  get 'partenaire/show'
+
   resources :evenements
   
-   
-  
+  resources :partenaire, only: [:index, :show]
+  resources :galerie, only: [:index]
+
  get 'tags/:tag', to: 'nante#tagged', as: :tag do
   resources :articles.tag_list
   resources :articles, only: [:index, :show, :tag_list]

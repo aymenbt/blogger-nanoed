@@ -18,10 +18,14 @@
 
 
   <div class="checkout-summary-item">
-    
+  
     <%= image_tag("shushi.jpg", size: "100x80") %>
     <div class="item-name">
-      <a>Sushi'kito - Restaurant Nantes</a>
+    
+      <a>Sushi-kito - Restaurant Nantes</a>
+     
+   
+    
       <p><span class="title">Adresse: </span>6 Rue Saint-Nicolas, 44000 Nantes</p>
       <p><span class="title">Téléphone: </span>+33 2 40 89 73 85</p>
     </div>
@@ -31,22 +35,28 @@
     </div>
     </div>
   <div class="checkout-summary-item">
+  
     <%= image_tag("Fils.jpg", size: "100x80") %>
     <div class="item-name">
+    
       <a>Les Fils À Maman | Bouffay</a>
+      
+  
       <p><span class="title">Adresse: </span>14 Rue Beauregard, 44000 Nantes</p>
       <p><span class="title">Téléphone: </span>+33 2 40 20 06 26</p>
     </div>
     <div class="item-price">
-      <p class="title"></p>
+      <p class="title"></p>  
       <a href="https://bit.ly/2OT8eeD">Itineraire</a>
     </div>
   </div>
   
    <div class="checkout-summary-item">
+ 
     <%= image_tag("Odeck.jpg", size: "100x80") %>
     <div class="item-name">
       <a>O Deck</a>
+   
       <p><span class="title">Adresse: </span>30 Quai Fernand Crouan, 44200 Nantes</p>
       <p><span class="title">Téléphone: </span>+33 2 40 71 71 00</p>
     </div>
@@ -55,8 +65,9 @@
       <a href="https://bit.ly/32clIpv">itineraire</a>
     </div>
   </div>
-
-  <button class="button expanded">autres Lieux</button>
+<% @restaus.limit(1).each do |restau| %>
+  <button class="button expanded"><%= link_to 'Autres Lieux', restau_index_path %></button>
+<% end %>  
 </div>
 
 
