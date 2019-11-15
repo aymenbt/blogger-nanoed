@@ -18,7 +18,10 @@
 <div class="media-object-section">
 <li><a href="#">Autheur: <%= article.author %></a></li>
 <h3><small><%= article.published_at %></small></h3>
-<p><%= article.description %></p>
+<p>
+ <%= truncate article.description, length: 90 %>
+<%= link_to "Voir plus", article_path(article), class: "" %><span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+</p>
      
  <i class="glyphicon glyphicon-tag" aria-hidden="true">Tags:</i><a class="tag-cloud-individual-tag" ><%= raw article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></a>  
 </div>

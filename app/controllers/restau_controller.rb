@@ -6,10 +6,11 @@ class RestauController < ApplicationController
       @articles = Article.tagged_with(params[:tag])
     else
     @restaus = Restau.all
-    @restaus = Restau.order(:title).page(params[:page]).per(10)
-
+    @restaus = Restau.order(:title).page(params[:page]).per(9)
+    
     @articles = Article.all
     @nantes = Nante.all
+    
    end
   end
   

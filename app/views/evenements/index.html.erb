@@ -1,19 +1,22 @@
-<p id="notice"><%= notice %></p>
-<br>
-<br>
 
-<h1>Evenements</h1>
+
+  <p id="notice"><%= notice %></p>
 
 <br>
 <br>
+<div class="centrer">
+  <h5 class="card-title">Evenements</h5>
+</div>
+<br>
+<br>
 <br>
 <br>
 
 
-
-<%= month_calendar events: @evenements do |date, evenements| %>
+<div class="centrer">
+ <%= month_calendar events: @evenements do |date, evenements| %>
   <%= date.day %>
-
+</div>
   <% evenements.each do |evenement| %>
     <div>
       

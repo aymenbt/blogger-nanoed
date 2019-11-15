@@ -8,8 +8,9 @@ class ArticleController < ApplicationController
       @articles = Article.all
       @articles = Article.order(:title).page(params[:page]).per(8)
     
-     @nantes = Nante.order(:title).limit(6) 
+      
      @nantes = Nante.all
+     @nantes = Nante.order(:title).limit(9)
      @restaus = Restau.all
      @evenements = Evenement.all
     end 

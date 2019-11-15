@@ -10,15 +10,16 @@
  <h6 class="card-title"> <%= nante.title %>  </h6>
 
     <%= image_tag(nante.image, width:"1000px", height:"1000px", alt: "picture of a whale eating a donkey") %>
-    <p> <%= nante.description %> </p>
+   
+    <p><%= truncate nante.description, length: 90 %></p> 
     
-      <%= link_to "plus", nante_path(nante), class: "button" %>
+    <%= link_to "Voir plus", nante_path(nante), class: "" %><span class="fa fa-chevron-circle-right" aria-hidden="true"></span>  
 
-    
+    <br>
 
    <i class="glyphicon glyphicon-tag" aria-hidden="true">Tags:</i><a class="tag-cloud-individual-tag" ><%= raw nante.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></a>
     
-                                                                                        
+                                                                                   
   </div>
 </div>
 
